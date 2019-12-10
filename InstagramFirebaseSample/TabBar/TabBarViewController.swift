@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import Firebase
 
 class TabBarViewController: UITabBarController {
     
@@ -14,6 +15,16 @@ class TabBarViewController: UITabBarController {
         super.viewDidLoad()
         
         self.delegate = self
+        
+        if Auth.auth().currentUser == nil {
+            DispatchQueue.main.async {
+                let loginVC = LoginViewController()
+                let naviController = UINavigationController(rootViewController: loginVC)
+                naviController.modalPresentationStyle = .fullScreen
+                self.present(naviController, animated: true)
+            }
+            return
+        }
         
         setupViewControllers()
     }

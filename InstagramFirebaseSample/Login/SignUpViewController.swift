@@ -1,5 +1,5 @@
 //
-//  SignInController.swift
+//  SignUpViewController.swift
 //  InstagramFirebaseSample
 //
 //  Created by 박인수 on 07/12/2019.
@@ -7,9 +7,13 @@
 //
 
 import UIKit
+import SnapKit
 
-class SignInViewController: UIViewController {
+class SignUpViewController: UIViewController {
+    
     override func viewDidLoad() {
         super.viewDidLoad()
     }
+    
 }
+
